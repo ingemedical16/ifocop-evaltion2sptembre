@@ -19,12 +19,12 @@ Le projet devra être cloné sur votre machine locale à partir de l'URI suivant
 
 SSH :
 ```bash
-git clone git@github.com:VirtuoWorks/eval-productivite.git
+git clone git@github.com:Tramb-dev/eval-productivity.git
 ```
 ou bien
 HTTPS :
 ```bash
-git clone https://github.com/VirtuoWorks/eval-productivite.git
+git clone https://github.com/Tramb-dev/eval-productivity.git
 ```
 
 ## 2 : Créer une branche (1pt)
@@ -112,6 +112,6 @@ Changer l'url du dépôt distant (la notre) par celle de votre dépôt local (la
 
 # Après l'évaluation
 
-Une fois l'évaluation terminée, vous enverrez le lien vers votre dépôt distant à l'adresse e-mail alexandre.masson@virtuoworks.com en précisant dans l'objet de l'e-mail les informations suivantes : [NOM] [prénom] [Promotion DIWJS]
+Une fois l'évaluation terminée, vous déposerez le lien vers votre dépôt distant sur la plateforme LMS de l'IFOCOP et vous m'enverrez un courriel à mon adresse bertrand.ravier@virtuoworks.com en mettant en copie mhamdouni@ifocop.fr en précisant dans l'objet de l'e-mail les informations suivantes : [NOM] [prénom] [Promotion DIWJS]
 
-Si vous __n'avez pas réussi__ à créer le dépôt distant ou pousser votre branche sur le dépôt distant, vous pouvez créer une archive avec votre dossier de travail __SANS le SOUS-DOSSIER__ `node_modules` et l'envoyer par mail à l'adresse alexandre.masson@virtuoworks.com en précisant dans l'objet de l'e-mail les informations suivantes : [NOM] [prénom] [Promotion DIWJS]
+Si vous __n'avez pas réussi__ à créer le dépôt distant ou pousser votre branche sur le dépôt distant, vous pouvez créer une archive zip avec votre dossier de travail __SANS le SOUS-DOSSIER__ `node_modules` puis la déposer sur la plateforme LMS de l'IFOCOP et me l'envoyer par courriel à l'adresse bertrand.ravier@virtuoworks.com et en copie à mhamdouni@ifocop.fr en précisant dans l'objet de l'e-mail les informations suivantes : [NOM] [prénom] [Promotion DIWJS]

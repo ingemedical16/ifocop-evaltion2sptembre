@@ -1,2 +1,5 @@
 # Dossier node_modules
 /node_modules
+
+# Dossier vscode
+.vscode
