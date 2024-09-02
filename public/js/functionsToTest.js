@@ -1,3 +1,4 @@
+
 /**
  * une function qui transforme les argument a une objet dont les key sont
  * l'index de l'argument
@@ -29,9 +30,17 @@ const multiplyAllByTwo = (arrayOfNumbers) => {
     arrayOfNumbers.constructor.prototype === new Array().constructor.prototype
   ) {
     response = arrayOfNumbers.map((val) => val * 2);
-    console.log("arrayTimesTwo: ", arrayTimesTwo);
+    console.log("arrayTimesTwo: ", response);
   } else {
     response = "The argument is not an Array of numbers";
   }
   return response;
 };
+
+
+var _default = {
+  multiplyAllByTwo,
+  returnAnObject
+};
+module.exports  = _default;
+

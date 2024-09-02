@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1725270633275" clover="3.2.0">
+  <project timestamp="1725270633276" name="All files">
+    <metrics statements="17" coveredstatements="17" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="4" elements="25" coveredelements="25" complexity="0" loc="17" ncloc="17" packages="1" files="1" classes="1"/>
+    <file name="functionsToTest.js" path="/Users/mohammedel-idrissi/Documents/IFOCOP/git/ifocop-formation-developeur -full-stack/evalation/eval-productivity/public/js/functionsToTest.js">
+      <metrics statements="17" coveredstatements="17" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="4"/>
+      <line num="8" count="1" type="stmt"/>
+      <line num="9" count="4" type="stmt"/>
+      <line num="10" count="4" type="cond" truecount="2" falsecount="0"/>
+      <line num="11" count="2" type="stmt"/>
+      <line num="12" count="2" type="stmt"/>
+      <line num="13" count="7" type="stmt"/>
+      <line num="14" count="7" type="stmt"/>
+      <line num="17" count="2" type="stmt"/>
+      <line num="19" count="4" type="stmt"/>
+      <line num="27" count="1" type="stmt"/>
+      <line num="29" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="32" count="3" type="stmt"/>
+      <line num="33" count="1" type="stmt"/>
+      <line num="35" count="1" type="stmt"/>
+      <line num="37" count="2" type="stmt"/>
+      <line num="41" count="1" type="stmt"/>
+      <line num="45" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>
