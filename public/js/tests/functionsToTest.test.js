@@ -1,48 +1,43 @@
+/* eslint-disable no-undef */
+const functionsToTest = require('../functionsToTest.js'); 
+const { returnAnObject, multiplyAllByTwo } = functionsToTest
+const  generateRandomNumbers = require('./test-utils.js'); 
 
-const functionsToTest = require('../functionsToTest.js')
+describe('returnAnObject', () => {
+  it('should return an object with arguments as keys and values', () => {
+    const args = ['string', 10, true];
+    const expectedObject = { 0: 'string', 1: 10, 2: true };
 
+    expect(returnAnObject(...args)).toEqual(expectedObject);
+  });
 
+  it('should return "No arguments were provided." if no arguments are passed', () => {
+    console.log(returnAnObject())
+    expect(returnAnObject()).toBe('No arguments were provided.');
+  });
+});
 
-describe('la test unitaire on utilisant Jest le code de fichier functionsToTest', () => { 
-    const {returnAnObject, multiplyAllByTwo} = functionsToTest
-    describe('test la function returnAnObject', () => {
-        test('should return "No argument was given to the function."', () => {
-          expect(returnAnObject()).toEqual("No argument was given to the function.");
-        });
-      
-        test('should return an object with the given arguments as values', () => {
-          const args = ['a', 'b', 'c'];
-          const expectedResult = { 0: 'a', 1: 'b', 2: 'c' };
-      
-          expect(returnAnObject(...args)).toEqual(expectedResult);
-        });
-      
-        test('should handle mixed data types', () => {
-          const args = [1, 'hello', true, { name: 'John' }];
-          const expectedResult = { 0: 1, 1: 'hello', 2: true, 3: { name: 'John' } };
-      
-          expect(returnAnObject(...args)).toEqual(expectedResult);
-        });
-      
-        test('should return a string message when no arguments are provided', () => {
-          expect(returnAnObject()).toBe('No argument was given to the function.');
-        });
-      });
+describe('multiplyAllByTwo', () => {
+  it('should multiply each element in a number array by 2', () => {
+    const numbers = [2, 4, 6];
+    const expectedResult = [4, 8, 12];
 
-      describe('multiplyAllByTwo function', () => {
-        test('should multiply all elements of an array by two', () => {
-          const inputArray = [2, 4, 6];
-          const expectedOutput = [4, 8, 12];
-          const result = multiplyAllByTwo(inputArray);
-          expect(result).toEqual(expectedOutput);
-        });
-      
-        test('should return an error message if the argument is not an array', () => {
-          const inputValue = 'This is a string';
-          const expectedOutput = 'The argument is not an Array of numbers';
-          const result = multiplyAllByTwo(inputValue);
-          expect(result).toEqual(expectedOutput);
-        });
-      });
-    
- });
+    expect(multiplyAllByTwo(numbers)).toEqual(expectedResult);
+  });
+
+  it('should throw a TypeError if the argument is not an array of numbers', () => {
+    expect(() => multiplyAllByTwo('string')).toThrow(TypeError);
+    expect(() => multiplyAllByTwo({})).toThrow(TypeError);
+  });
+
+  it('should handle an empty array', () => {
+    expect(multiplyAllByTwo([])).toEqual([]);
+  });
+
+  it('should handle large arrays with random numbers (optional)', () => {
+    const largeArray = generateRandomNumbers(100);
+    const expectedResult = largeArray.map((number) => number * 2);
+
+    expect(multiplyAllByTwo(largeArray)).toEqual(expectedResult);
+  });
+});

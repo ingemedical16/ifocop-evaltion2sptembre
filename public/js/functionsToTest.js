@@ -1,46 +1,39 @@
-
 /**
- * une function qui transforme les argument a une objet dont les key sont
- * l'index de l'argument
- * @param  {...any} args
- * @returns {Object}
+ * Converts any number of arguments into an object where each argument's key is its index.
+ *
+ * @param  {...any} args - Arguments to be converted into an object.
+ * @returns {Object} - Object with arguments as keys and values.
  */
 const returnAnObject = (...args) => {
   let response = {};
   if (args.length) {
-    let index = 0;
-    args.forEach((arg) => {
+    args.forEach((arg, index) => {
       response[index] = arg;
-      index++;
     });
   } else {
-    response = "No argument was given to the function.";
+    response = "No arguments were provided.";
   }
   return response;
 };
+
 /**
- * une function qui prend un tableau de number et retourné  le tableau dont chaque
- * element est multiplier par 2
- * @param {Array} arrayOfNumbers - tableau de number
- * @returns {Array}  - tableau de number
+ * Multiplies each element in an array of numbers by 2.
+ *
+ * @param {number[]} arrayOfNumbers - Array of numbers to be multiplied.
+ * @returns {number[]} - New array with each element multiplied by 2.
+ * @throws {TypeError} - If the argument is not an array of numbers.
  */
 const multiplyAllByTwo = (arrayOfNumbers) => {
-  let response;
-  if (
-    arrayOfNumbers.constructor.prototype === new Array().constructor.prototype
-  ) {
-    response = arrayOfNumbers.map((val) => val * 2);
-    console.log("arrayTimesTwo: ", response);
-  } else {
-    response = "The argument is not an Array of numbers";
+  if (!Array.isArray(arrayOfNumbers)) {
+    throw new TypeError('The argument must be an array of numbers.');
   }
+
+  const response = arrayOfNumbers.map((val) => val * 2);
+  console.log("arrayTimesTwo: ", response);
   return response;
 };
 
-
-var _default = {
+module.exports = {
   multiplyAllByTwo,
   returnAnObject
 };
-module.exports  = _default;
-
