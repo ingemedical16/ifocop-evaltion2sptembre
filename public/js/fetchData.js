@@ -4,6 +4,10 @@ window.addEventListener('DOMContentLoaded',()=>{
   const pokeAbilityBtn=document.getElementById('ability')
   const sendButton=document.getElementById('sendButton')
   
+  /**
+   * une function qui Afficher le message size 
+   * @param {Event} event 
+   */
   const displayComment=(event)=>{
     const comment=document.getElementById("myComment")
     event.preventDefault()
@@ -11,6 +15,11 @@ window.addEventListener('DOMContentLoaded',()=>{
     $("#message").html($("#messageInput").val())
   }
 
+  /**
+   * une function qui retrieve  un Objet 'Pokemon'
+   * de  lAPI avec l'url  https://pokeapi.co/api/v2/pokemon/${pokedexNum}
+   * ou pokedexNum est number aléatoire entre 0 et  897
+   */
   const fetchPokemon=async ()=>{
     const pokedexNum=Math.floor(Math.random() * 897)
     let foundPokemon=''
@@ -36,7 +45,11 @@ window.addEventListener('DOMContentLoaded',()=>{
     pokeP.innerText=`Your Pokémon is ${pokeInfo.name}.`
     pokeAbilityBtn.removeAttribute('disabled')
   }
-
+   /**
+   * une function qui retrieve  un Objet 'Abilities Pokemon'
+   * de  lAPI avec l'url  https://pokeapi.co/api/v2/ability/${pokedexNum}
+   * ou pokedexNum est number aléatoire entre 0 et  897
+   */
   const fetchPokemonAbilities=async()=>{
     const pokedexNum=Math.floor(Math.random() * 266)
     let foundAbilities=''
@@ -72,11 +85,14 @@ window.addEventListener('DOMContentLoaded',()=>{
     pokeBtn.addEventListener('click', fetchPokemon)
     pokeDiv.appendChild(pokeP)
   }
-
+/**
+ * une function qui execute un listener event
+ */
   const pokemonAbility=()=>{
     pokeAbilityBtn.addEventListener('click', fetchPokemonAbilities)
     pokeDiv.appendChild(pokeAbility)
   }
+  
   
   (function startAll(){
     invoquePokemon()

@@ -1,3 +1,9 @@
+/**
+ * une function qui transforme les argument a une objet dont les key sont
+ * l'index de l'argument
+ * @param  {...any} args 
+ * @returns {Object}
+ */
 const returnAnObject = (...args) => {
   let response = {};
   if (args.length) {
@@ -11,7 +17,12 @@ const returnAnObject = (...args) => {
   };
   return response;
 };
-
+/**
+ * une function qui prend un tableau de number et retourné  le tableau dont chaque 
+ * element est multiplier par 2
+ * @param {Array} arrayOfNumbers - tableau de number
+ * @returns {Array}  - tableau de number
+ */
 const multiplyAllByTwo = (arrayOfNumbers) => {
   let response;
   if (arrayOfNumbers.constructor.prototype === new Array().constructor.prototype) {
