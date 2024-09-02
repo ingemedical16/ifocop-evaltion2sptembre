@@ -13,7 +13,7 @@ window.addEventListener("DOMContentLoaded", () => {
     const comment = document.getElementById("myComment");
     event.preventDefault();
     comment.style.visibility = "visible";
-    $("#message").html($("#messageInput").val());
+    $("#message").text($("#messageInput").val());
   };
 
   /**
