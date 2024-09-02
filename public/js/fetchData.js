@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 window.addEventListener('DOMContentLoaded',()=>{
   const pokeP=document.getElementById('pokeInfo')
   const pokeDiv=document.getElementById('pokemon-info')
@@ -90,7 +91,7 @@ window.addEventListener('DOMContentLoaded',()=>{
  */
   const pokemonAbility=()=>{
     pokeAbilityBtn.addEventListener('click', fetchPokemonAbilities)
-    pokeDiv.appendChild(pokeAbility)
+    pokeDiv.appendChild(pokeAbilityBtn)
   }
   
   
